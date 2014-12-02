@@ -3,12 +3,14 @@
 		"user" : 53,
 		"distance" : 3,
 		"duration" : 180000,
-		"date" : "November 27, 2014 09:45:00"
+		"date" : "November 27, 2014 09:45:00",
+		"felt" : "Tired at first"
 	},
 	{
 		"user" : 53,
 		"distance" : 3.256,
 		"duration" : 978600,
-		"date" : "November 28, 2014 10:15:00"
+		"date" : "November 28, 2014 10:15:00",
+		"felt" : "Great"
 	}
 ] 		

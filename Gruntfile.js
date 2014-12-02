@@ -77,6 +77,16 @@ module.exports = function(grunt) {
             ], 
             dest: 'build/bower_components/components-font-awesome/css/', 
           },
+          // Moment
+          {
+            cwd : 'src/bower_components/moment/',
+            expand: true,
+            src: [
+              '**/*.js',
+              '*.map'
+            ], 
+            dest: 'build/bower_components/moment/', 
+          },
           // jQuery
           {
             cwd : 'src/bower_components/jquery/dist/',

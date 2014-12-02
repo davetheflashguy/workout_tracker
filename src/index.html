@@ -34,6 +34,7 @@
     <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="./bower_components/underscore/underscore.js"></script>
     <script src="./bower_components/backbone/backbone.js"></script>
+    <script src="./bower_components/moment/moment.js"></script>
     <!-- Application files -->
     <script src="./js/app.js"></script>
     <script type="text/template" id="workout-table-template">
@@ -45,6 +46,7 @@
           <th>Distance (Miles)</th>
           <th>Duration (Minute)</th>
           <th>Date</th>
+          <th>Felt</th>
         </tr>
       </thead>
       <tbody>
@@ -52,8 +54,9 @@
           <tr>
             <td><%= workout.user %></td>
             <td><%= workout.distance %> Miles</td>
-            <td><%= workout.duration %> Minutes</td>
+            <td><%= workout.duration %></td>
             <td><%= workout.date %></td>
+            <td><%= workout.felt %></td>
           </tr>
         <% }); %>
       </tbody>

@@ -25,6 +25,7 @@
     "highcharts": "~4.0.4",
     "backbone": "~1.1.2",
     "fontawesome": "~4.2.0",
-    "text": "~2.0.12"
+    "text": "~2.0.12",
+    "moment": "~2.8.4"
   }
 }
