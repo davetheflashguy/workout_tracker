@@ -21,23 +21,23 @@ var WorkoutCollection = Backbone.Collection.extend({
 var ExerciseApp = Backbone.View.extend({
 
 	el: "#exercise_app",
+	template: null,
 
 	initialize: function() {
 		this.workoutCollection = new WorkoutCollection();
-    this.listenTo(this.workoutCollection, "reset sync remove", this.render);
-    this.workoutCollection.fetch({dataType: "json"});
+	    this.listenTo(this.workoutCollection, "reset sync remove", this.render);
+	    this.workoutCollection.fetch({dataType: "json"});
+
+	    this.template = _.template($('#workout-table-template').html());
 	},
 
 	render: function() {
 		var coll = this.workoutCollection.toJSON();
-		console.log(coll.length);
-		console.log(coll);
-		
-		var template = _.template($('#workout-list-template').html(), {workouts: coll});
-		this.$el.html(template);
-
+		this.$el.html(this.template({workouts: coll}));
 	},
 
 });
 
-var app = new ExerciseApp
+$( document ).ready(function() {
+	var app = new ExerciseApp
+});

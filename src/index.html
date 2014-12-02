@@ -36,6 +36,28 @@
     <script src="./bower_components/backbone/backbone.js"></script>
     <!-- Application files -->
     <script src="./js/app.js"></script>
-
+    <script type="text/template" id="workout-table-template">
+    <h4>Found <%= workouts.length %> Workouts</h4>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>User</th>
+          <th>Distance (Miles)</th>
+          <th>Duration (Minute)</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% _.each(workouts, function(workout) { %>
+          <tr>
+            <td><%= workout.user %></td>
+            <td><%= workout.distance %> Miles</td>
+            <td><%= workout.duration %> Minutes</td>
+            <td><%= workout.date %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+    </script>
   </body>
 </html>
